@@ -93,7 +93,7 @@ class LitAutoEncoder(pl.LightningModule):
         self.log("val_loss", val_loss)
         
 # train with both splits
-trainer = Trainer(device=4, accelerator='gpu')
+trainer = Trainer()
 trainer.fit(model, train_loader, valid_loader)
 ```
 
